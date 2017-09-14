@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.test.model.BatchSchedule" />
+	<import class="com.test.model.Courses" />
+	<import class="com.test.model.EnrollCourse" />
+	<class name="com.test.model.impl.BatchScheduleImpl" table="mz_BatchSchedule">
+		<cache usage="read-write" />
+		<id name="BatchSchedule_Id" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="batchcCat" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="batchName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="batchteacher" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="batchTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="batchDay" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.test.model.impl.CoursesImpl" table="mz_Courses">
+		<cache usage="read-write" />
+		<id name="cId" type="long" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor">
+			<generator class="increment" />
+		</id>
+		<property name="cName" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cCat" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cDesc" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cPreq" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cDuration" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.test.model.impl.EnrollCourseImpl" table="mz_EnrollCourse">
+		<cache usage="read-write" />
+		<id name="eId" type="long" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor">
+			<generator class="increment" />
+		</id>
+		<property name="efName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="egen" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="econt" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="equal" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ecourse" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ebatch" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="estatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

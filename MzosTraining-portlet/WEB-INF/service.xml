@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.test">
+	<author>mzos</author>
+	<namespace>mz</namespace>
+	<entity name="Courses" local-service="true" remote-service="true">
+		<column name="cId" type="long" primary="true" id-type="increment"></column>
+		<column name="cName" type="String"></column>
+		<column name="cCat" type="String"></column>
+		<column name="cDesc" type="String"></column>
+		<column name="cPreq" type="String"></column>
+		<column name="cDuration" type="int"></column>
+		<finder name="finder1" return-type="Collection">
+			<finder-column name="cCat"></finder-column>
+		</finder>
+	</entity>
+	<entity name="BatchSchedule" local-service="true" remote-service="true">
+		<!-- PK fields -->
+		<column name="BatchSchedule_Id" type="long" primary="true" id-type="increment"></column>
+		<!-- Audit fields -->
+		<column name="batchcCat" type="String"></column>
+		<column name="batchName" type="String"></column>
+		<column name="batchteacher" type="String"></column>
+		<column name="batchTime" type="String"></column>
+		<column name="batchDay" type="String"></column>
+		<finder name="finder2" return-type="Collection">
+			<finder-column name="batchcCat"></finder-column>
+		</finder>
+	</entity>
+	<entity name="EnrollCourse" local-service="true" remote-service="true">
+		<column name="eId" type="long" primary="true" id-type="increment"></column>
+		<column name="efName" type="String"></column>
+		<column name="egen" type="String"></column>
+		<column name="email" type="String"></column>
+		<column name="econt" type="long"></column>
+		<column name="equal" type="String"></column>
+		<column name="ecourse" type="String"></column>
+		<column name="ebatch" type="String"></column>
+		<column name="estatus" type="String"></column>
+	</entity>
+</service-builder>

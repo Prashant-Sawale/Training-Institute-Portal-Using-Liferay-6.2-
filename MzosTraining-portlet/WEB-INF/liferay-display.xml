@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.2.0//EN" "http://www.liferay.com/dtd/liferay-display_6_2_0.dtd">
+
+<display>
+	<category name="category.sample">
+		<portlet id="add-course"></portlet>
+		<portlet id="private-display-course"></portlet>
+		<portlet id="display-course"></portlet>
+		<portlet id="enroll-now"></portlet>
+		<portlet id="display-java"></portlet>
+		<portlet id="display-others"></portlet>
+		<portlet id="display-net"></portlet>
+		<portlet id="display-testing"></portlet>
+		<portlet id="batch-schedule"></portlet>
+		<portlet id="private-display-batch"></portlet>
+		<portlet id="display-batches"></portlet>
+		<portlet id="private-display-enrolled"></portlet>
+		<portlet id="dash-board"></portlet>
+	</category>
+</display>

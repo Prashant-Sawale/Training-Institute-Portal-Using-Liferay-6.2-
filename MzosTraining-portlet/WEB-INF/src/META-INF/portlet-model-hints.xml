@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.test.model.BatchSchedule">
+		<field name="BatchSchedule_Id" type="long" />
+		<field name="batchcCat" type="String" />
+		<field name="batchName" type="String" />
+		<field name="batchteacher" type="String" />
+		<field name="batchTime" type="String" />
+		<field name="batchDay" type="String" />
+	</model>
+	<model name="com.test.model.Courses">
+		<field name="cId" type="long" />
+		<field name="cName" type="String" />
+		<field name="cCat" type="String" />
+		<field name="cDesc" type="String" />
+		<field name="cPreq" type="String" />
+		<field name="cDuration" type="int" />
+	</model>
+	<model name="com.test.model.EnrollCourse">
+		<field name="eId" type="long" />
+		<field name="efName" type="String" />
+		<field name="egen" type="String" />
+		<field name="email" type="String" />
+		<field name="econt" type="long" />
+		<field name="equal" type="String" />
+		<field name="ecourse" type="String" />
+		<field name="ebatch" type="String" />
+		<field name="estatus" type="String" />
+	</model>
+</model-hints>

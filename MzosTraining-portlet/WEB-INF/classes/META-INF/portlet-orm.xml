@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.test.model.impl.BatchScheduleModelImpl">
+		<attributes>
+			<id name="BatchSchedule_Id" />
+			<basic name="batchcCat" />
+			<basic name="batchName" />
+			<basic name="batchteacher" />
+			<basic name="batchTime" />
+			<basic name="batchDay" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.test.model.impl.CoursesModelImpl">
+		<attributes>
+			<id name="cId" />
+			<basic name="cName" />
+			<basic name="cCat" />
+			<basic name="cDesc" />
+			<basic name="cPreq" />
+			<basic name="cDuration" />
+			<transient name="CCat" />
+			<transient name="CDesc" />
+			<transient name="CDuration" />
+			<transient name="CId" />
+			<transient name="CName" />
+			<transient name="CPreq" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.test.model.impl.EnrollCourseModelImpl">
+		<attributes>
+			<id name="eId" />
+			<basic name="efName" />
+			<basic name="egen" />
+			<basic name="email" />
+			<basic name="econt" />
+			<basic name="equal" />
+			<basic name="ecourse" />
+			<basic name="ebatch" />
+			<basic name="estatus" />
+			<transient name="EId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.test.model.impl.BatchScheduleImpl" name="BatchSchedule">
+		<table name="mz_BatchSchedule" />
+		<attributes />
+	</entity>
+	<entity class="com.test.model.impl.CoursesImpl" name="Courses">
+		<table name="mz_Courses" />
+		<attributes />
+	</entity>
+	<entity class="com.test.model.impl.EnrollCourseImpl" name="EnrollCourse">
+		<table name="mz_EnrollCourse" />
+		<attributes />
+	</entity>
+</entity-mappings>

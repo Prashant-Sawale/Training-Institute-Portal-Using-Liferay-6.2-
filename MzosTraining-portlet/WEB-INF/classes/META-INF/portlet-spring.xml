@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.test.service.BatchScheduleLocalService" class="com.test.service.impl.BatchScheduleLocalServiceImpl" />
+	<bean id="com.test.service.BatchScheduleService" class="com.test.service.impl.BatchScheduleServiceImpl" />
+	<bean id="com.test.service.persistence.BatchSchedulePersistence" class="com.test.service.persistence.BatchSchedulePersistenceImpl" parent="basePersistence" />
+	<bean id="com.test.service.CoursesLocalService" class="com.test.service.impl.CoursesLocalServiceImpl" />
+	<bean id="com.test.service.CoursesService" class="com.test.service.impl.CoursesServiceImpl" />
+	<bean id="com.test.service.persistence.CoursesPersistence" class="com.test.service.persistence.CoursesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.test.service.EnrollCourseLocalService" class="com.test.service.impl.EnrollCourseLocalServiceImpl" />
+	<bean id="com.test.service.EnrollCourseService" class="com.test.service.impl.EnrollCourseServiceImpl" />
+	<bean id="com.test.service.persistence.EnrollCoursePersistence" class="com.test.service.persistence.EnrollCoursePersistenceImpl" parent="basePersistence" />
+</beans>
